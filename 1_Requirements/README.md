@@ -18,41 +18,31 @@ The purpose of the  project is to understand analog-to-digital number conversion
 
 1. Use schematic of the LCD keypad shield and find out the connection of five push buttons: Select, Left, Up, Down, and Right.
 
-   &nbsp;
 
-   &nbsp;
-
-   &nbsp;
-
-   &nbsp;
-
-   &nbsp;
-
-   &nbsp;
 
 2. According to the connection, calculate the voltage values on pin PC0[A0] if one button is pressed at a time. In this case, the voltage on the pin is given by the [voltage divider](https://www.alprojectoutcircuits.com/tools/voltage-divider-calculator/), where resistors R3, R4, R5 and R6 are applied successively.
 
-   ![Equation: Voltage divider](images/eq_divider1.png)
+   ![Equation: Voltage divider](1_Requirements/eq_divider1.png)
 
-   ![Equation: Voltage divider](images/eq_divider2.png)
-
-   &nbsp;
-
-   ![Equation: Voltage divider](images/eq_divider3.png)
+   ![Equation: Voltage divider](1_Requirements/eq_divider2.png)
 
    &nbsp;
 
-   ![Equation: Voltage divider](images/eq_divider4.png)
+   ![Equation: Voltage divider](1_Requirements/eq_divider3.png)
 
    &nbsp;
 
-   ![Equation: Voltage divider](images/eq_divider5.png)
+   ![Equation: Voltage divider](1_Requirements/eq_divider4.png)
+
+   &nbsp;
+
+   ![Equation: Voltage divider](1_Requirements/eq_divider5.png)
 
    &nbsp;
 
 3. Calculate the voltage value if none of the push buttons is pressed.
 
-   ![Equation: Voltage divider](images/eq_divider6.png)
+   ![Equation: Voltage divider](1_Requirements/eq_divider6.png)
 
    &nbsp;
 
@@ -97,7 +87,7 @@ The operation with the AD converter is performed through ADMUX, ADCSRA, ADCL+ADC
 
 ```
 
-### Both versions
+
 
 1. Compile the template code and download to Arduino Uno board or load `*.hex` firmware to SimulIDE circuit (create an identical connection to the LCD keypad shield).
 
@@ -176,13 +166,4 @@ UART frame 8N1
 # define F_CPU 16000000  // CPU frequency in Hz required for UART_BAUD_SELECT
 #endif
 ```
-
-### Version: SimulIDE
-
-1. In SimulIDE, right click to ATmega328 package and select **Open Serial Monitor**. In this window you can receive data from the microcontroller, but also send them back.
-
-   ![SimulIDE](6_Images and videos/screenshot_simulide_lcd_uart.png)
-
-
-   ![SimulIDE](6_Images and videos/screenshot_simulide_lcd_final.png)
 
